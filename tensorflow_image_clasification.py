@@ -53,7 +53,7 @@ def predict_image_class(model, image_path):
 def process_images_in_folder(model, folder_path):
     for root, _, files in os.walk(folder_path):
         for file in files:
-            if file.lower().endswith(('png', 'jpg', 'jpeg', 'bmp', 'gif')):
+            if file.lower().endswith(('png', 'jpg', 'jpeg', 'bmp', 'gif')) and not file.lower().endswith('xxjpg'):
                 file_path = os.path.join(root, file)
                 predicted_class, confidence = predict_image_class(model, file_path)
                 print(f"File: {file_path}")
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     model = load_or_fine_tune_model()
 
     # Path to folder containing images
-    folder_path = "path/to/your/folder"  # Update with actual folder path
+    folder_path = "F:\\ULTFONE_20240829_175529\\E\\Lost Files\\File Name Lost\\jpg\\JPG\\2024\\Processed1\\300 x 100_Done"  # Update with actual folder path
 
     # Process images
     process_images_in_folder(model, folder_path)
