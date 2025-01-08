@@ -112,7 +112,7 @@ def organize_images(base_folder, model):
 if __name__ == "__main__":
     # Base folder containing images or dataset
     mode = 'classify'
-    base_folder = 'F:\\ULTFONE_20240829_175529\\E\\Lost Files\\File Name Lost\\jpg\\JPG\\2024\\Processed1\\400 x 300_Done'
+    base_folder = 'F:\\ULTFONE_20240829_175529\\E\\Lost Files\\File Name Lost\\jpg\\JPG\\2024\\Processed1\\300 x 1100_Done'
     model_path = 'D:\\Projects\\face_sorter\\class.keras'
     
     if os.path.exists(model_path) and os.path.exists(base_folder):
